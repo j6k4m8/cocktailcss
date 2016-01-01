@@ -1,185 +1,272 @@
 <html>
-	<head>
-		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
-            <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-		<style type="text/less">
-			* {
-				box-sizing: border-box;
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<style type="text/less">
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		background: #efefef;
+	}
+
+	.drink-card {
+		background-color: #DEDEDE;
+		height: 20em;
+		width: 20em;
+		position: relative;
+		perspective: 1000px;
+		margin: 1em;
+		display: inline-block;
+		transition: all 1s;
+		.card-tex;
+
+		h1 {
+			font-family: 'Oswald', sans-serif;
+			font-weight: normal;
+			color: #766;
+			width: 100%;
+			text-align: center;
+			position: absolute;
+			bottom: 0;
+			font-size: 1.6em;
+		}
+	}
+
+	.glass {
+		.glass-tex;
+	}
+
+	.mug {
+		background-color: brown;
+	}
+
+	.highball-glass {
+		height: 14em;
+		width: 7em;
+		margin: auto;
+		position: absolute;
+		left: 0; right: 0; top: 0; bottom: 0;
+		transform: rotateX(160deg);
+		border-top-left-radius: 0.5em;
+		border-top-right-radius: 0.5em;
+		border-top: 0.2em solid #E5F8F8;
+		border-left: 0.2em solid #E5F8F8;
+		border-right: 0.2em solid #E5F8F8;
+
+		.oz4 {
+			height: 7em;
+		}
+		.oz5 {
+			height: 7.4em;
+		}
+
+		* {
+			opacity: .9;
+		}
+	}
+
+	.old-fashioned-glass {
+		height: 13em;
+		width: 12em;
+		margin: auto;
+		position: absolute;
+		left: 0; right: 0; top: 0; bottom: 0;
+		transform: rotateX(160deg);
+		border-top-left-radius: 0.5em;
+		border-top-right-radius: 0.5em;
+		border-top: 0.2em solid #E5F8F8;
+		border-left: 0.2em solid #E5F8F8;
+		border-right: 0.2em solid #E5F8F8;
+
+		&.on-the-rocks {
+			&:after {
+				position: absolute;
+				content: " ";
+				.ice;
+				width: 4em;
+				height: 4em;
+				left: 4em;
+				top: 5em;
+				transform: rotate(20deg);
+				border-radius: 1em;
+				z-index: 0;
+				box-shadow: -3em  1em 0   0em rgba(254,255,255,0.5);
 			}
-
-			.drink-card {
-			    background-color: #DEDEDE;
-			    height: 20em;
-			    width: 20em;
-			    border-radius: 1em;
-			    position: relative;
-			    perspective: 1000px;
-			    margin: 1em;
-			    display: inline-block;
-			    transition: all 1s;
-			    .card-tex;
-
-			    h1 {
-			    	font-family: 'Oswald', sans-serif;
-			    	font-weight: normal;
-			    	color: #766;
-			    	width: 100%;
-			    	text-align: center;
-			    	position: absolute;
-			    	bottom: 0;
-			    	font-size: 1.6em;
-			    }
+			&:before {
+				position: absolute;
+				content: " ";
+				.ice;
+				width: 4em;
+				height: 4em;
+				left: 6em;
+				top: 5em;
+				transform: rotate(30deg);
+				border-radius: 1em;
+				z-index: 3;
+				box-shadow: -1em    1em 0  0em rgba(254,255,255,0.5);
 			}
+		}
 
-			.glass {
-            	     .glass-tex;
-                  }
+		.oz4 {
+			height: 7em;
+		}
+		.oz5 {
+			height: 7.1em;
+		}
 
-                  .highball-glass {
-                  	height: 14em;
-                  	width: 7em;
-                  	margin: auto;
-                  	position: absolute;
-                  	left: 0; right: 0; top: 0; bottom: 0;
-                  	transform: rotateX(160deg);
-              		border-top-left-radius: 0.5em;
-              		border-top-right-radius: 0.5em;
-                  	border-top: 0.2em solid #E5F8F8;
-                  	border-left: 0.2em solid #E5F8F8;
-                  	border-right: 0.2em solid #E5F8F8;
+		* {
+			opacity: .9;
+		}
+	}
 
-                  	.oz4 {
-                  		height: 7em;
-                  	}
-                  	.oz5 {
-                  		height: 7.4em;
-                  	}
 
-                  	* {
-                  		opacity: .9;
-                  	}
-                  }
+	.mug {
+		height: 13em;
+		width: 12em;
+		margin: auto;
+		position: absolute;
+		left: 0; right: 0; top: 0; bottom: 0;
+		transform: rotateX(160deg);
+		border-top-left-radius: 5em;
+		border-bottom-left-radius: 1em;
+		border-top-right-radius: 5em;
+		border-bottom-right-radius: 1em;
+		border-top: 0.2em solid #E5F8F8;
+		border-left: 0.2em solid #E5F8F8;
+		border-right: 0.2em solid #E5F8F8;
 
-                  .old-fashioned-glass {
-                  	height: 13em;
-                  	width: 12em;
-                  	margin: auto;
-                  	position: absolute;
-                  	left: 0; right: 0; top: 0; bottom: 0;
-                  	transform: rotateX(160deg);
-              		border-top-left-radius: 0.5em;
-              		border-top-right-radius: 0.5em;
-                  	border-top: 0.2em solid #E5F8F8;
-                  	border-left: 0.2em solid #E5F8F8;
-                  	border-right: 0.2em solid #E5F8F8;
-
-                  	&.on-the-rocks {
-                  		&:after {
-                  			position: absolute;
-                  			content: " ";
-                  			.ice;
-                  			width: 4em;
-                  			height: 4em;
-                  			left: 4em;
-                  			top: 5em;
-                  			transform: rotate(20deg);
-                  			border-radius: 1em;
-                  			z-index: 0;
-                  			box-shadow: -3em  1em 0   0em rgba(254,255,255,0.5);
-                  		}
-                  		&:before {
-                  			position: absolute;
-                  			content: " ";
-                  			.ice;
-                  			width: 4em;
-                  			height: 4em;
-                  			left: 6em;
-                  			top: 5em;
-                  			transform: rotate(30deg);
-                  			border-radius: 1em;
-                  			z-index: 3;
-                  			box-shadow: -1em    1em 0  0em rgba(254,255,255,0.5);
-                  		}
-                  	}
-
-                  	.oz4 {
-                  		height: 7em;
-                  	}
-                  	.oz5 {
-                  		height: 7.1em;
-                  	}
-
-                  	* {
-                  		opacity: .9;
-                  	}
-                  }
-
-			.fill {
-				width: 100%;
-				&:first-child {
-					border-top-left-radius: 0.5em;
-					border-top-right-radius: 0.5em;
-				}
+		&.on-the-rocks {
+			&:after {
+				position: absolute;
+				content: " ";
+				.ice;
+				width: 4em;
+				height: 4em;
+				left: 4em;
+				top: 7em;
+				transform: rotate(20deg);
+				border-radius: 1em;
+				z-index: 0;
+				box-shadow: -3em  1em 0   0em rgba(254,255,255,0.5);
 			}
-
-			.head {
-				border-bottom-left-radius: 1em;
-				border-bottom-right-radius: 1em;
-				border-bottom: 0.5em solid;
+			&:before {
+				position: absolute;
+				content: " ";
+				.ice;
+				width: 4em;
+				height: 4em;
+				left: 6em;
+				top: 7.5em;
+				transform: rotate(30deg);
+				border-radius: 1em;
+				z-index: 3;
+				box-shadow: -1em    1em 0  0em rgba(254,255,255,0.5);
 			}
+		}
 
-            
-                  .whisky {
-                  	background: #7c3535;
-                        background: url(swirl_pattern.png) center center,
-                                    linear-gradient(top, #7c3535 0%,#752201 60%,#72382f 100%);
-                  }
-                  .coffee-layered {
-                  	background: #a3652f;
-                        background: linear-gradient(bottom, #a3652f 16%,#3f1507 77%,#5e2e26 86%);
-                  }
-                  .foam-layered {
-                  	opacity: 0.8;
-                  	background: #fcfff4;
-                        color: #e9e9ce;
-                  	background: linear-gradient(top, #a3652f 0%, #E2D5A0 10%,#e9e9ce 100%);
-                  }
+		.oz3 {
+			height: 4em;
+		}
+		.oz4 {
+			height: 5em;
+		}
+		.oz5 {
+			height: 6em;
+		}
 
-                  .ice {
-                        background: url(http://subtlepatterns.com/patterns/symphony.png),
-                                    linear-gradient(135deg, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%);
-                  	opacity: 0.8;
-                  	filter: contrast(10%);
-                  }
+		* {
+			opacity: .9;
+		}
 
-                  .glass-tex {
-                  	background: #ebf1f6;
-                        background: linear-gradient(80deg, #ebf1f6 0%,#89C3EB 50%,#89c3eb 51%,#d5ebfb 100%);
-                  }
+		.fill:first-child {
+			border-top-left-radius: 5em;
+			border-top-right-radius: 5em;
+		}
+	}
 
-                  .card-tex {
-                  	background: rgb(254,255,255);
-                        background: linear-gradient(135deg, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%);
-                  	box-shadow: 0 0 10px #ccc;
-                  }
+	.fill {
+		width: 100%;
+		&:first-child {
+			border-top-left-radius: 0.5em;
+			border-top-right-radius: 0.5em;
+		}
+	}
 
-                  .recipe {
-                        position: absolute;
-                        top: 0; left: 0; right: 0; bottom: 0;
-                        transition: opacity 0.4s;
-                        opacity: 0;
-                        background: black;
-                        color: white;
-                        border-radius: 1em;
-                        padding: 1.5em;
-                        font-family: 'Open Sans', sans-serif;
-                        font-size: 0.9em;
-                        text-align: justify;
-                        z-index: 99;
-                        &:hover { opacity: 0.8; }
-                  }
+	.head {
+		border-bottom-left-radius: 1em;
+		border-bottom-right-radius: 1em;
+		border-bottom: 0.5em solid;
+	}
 
-                  //{}
+
+	.whisky {
+		background: #7c3535;
+		background: url(swirl_pattern.png) center center,
+		linear-gradient(top, #7c3535 0%,#752201 60%,#72382f 100%);
+	}
+	.vodka {
+		background: white;
+	}
+	.vodka-pomegranate-juice {
+		background: fade(lighten(brown, 10), 90);
+	}
+	.beer {
+		background: fade(lighten(brown, 30), 70);
+	}
+	.coffee-layered {
+		background: #a3652f;
+		background: linear-gradient(bottom, #a3652f 16%,#3f1507 77%,#5e2e26 86%);
+	}
+	.foam-layered {
+		opacity: 0.8;
+		background: #fcfff4;
+		color: #e9e9ce;
+		background: linear-gradient(top, #a3652f 0%, #E2D5A0 10%,#e9e9ce 100%);
+	}
+
+	.ice {
+		background: url(http://subtlepatterns.com/patterns/symphony.png),
+		linear-gradient(135deg, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%);
+		opacity: 0.8;
+		filter: contrast(10%);
+	}
+
+	.garnish-with-lime {
+		position: absolute;
+		background: limegreen;
+		border-bottom-left-radius: 5em;
+		height: 3em;
+		width: 6em;
+		border-bottom-right-radius: 5em;
+		bottom: -1em;
+		left: -3em;
+	}
+
+	.glass-tex {
+		background: #ebf1f6;
+		background: linear-gradient(80deg, #ebf1f6 0%,#89C3EB 50%,#89c3eb 51%,#d5ebfb 100%);
+	}
+
+	.card-tex {
+		background: rgb(254,255,255);
+		box-shadow: 0 0 10px #ccc;
+	}
+
+	.recipe {
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		transition: opacity 0.4s;
+		opacity: 0;
+		background: black;
+		color: white;
+		padding: 1.5em;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 0.8em;
+		z-index: 99;
+		&:hover { opacity: 0.8; }
+	}
 		</style>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
@@ -187,37 +274,59 @@
 
 	<body>
 		<div class="drink-card">
-                  <div id="irish-godson">
-                      <div class="glass highball-glass">
-                      	<div class="fill oz4 coffee-layered"></div>
-                      	<div class="fill oz5 foam-layered head"></div>
-                      </div>
-                  </div>
-                  <h1>Irish Godson</h1>
-                  <div class="recipe">
-                        <h2>Irish Godson</h2>
-                        <p>A cappuccino with a twist, served cold.</p>
-                        <ul>
-                              <li>One count of <b>Canadian Club</b> whisky and a splash of <b>Amaretto</b> added to 5oz of <b>Counter Culture <i>Apollo</i></b> cold-brew coffee.</li>
-                              <li>Blend 3oz heavy whipping cream with one egg-white, 1.5oz sugar, and 1oz gin. Pour out the liquid and add foam over the coffee.</li>
-                        </ul>
-                  </div>
+			<div id="irish-godson">
+				<div class="glass highball-glass">
+					<div class="fill oz4 coffee-layered"></div>
+					<div class="fill oz5 foam-layered head"></div>
+				</div>
+			</div>
+			<h1>Irish Godson</h1>
+			<div class="recipe">
+				<h2>Irish Godson Fizz</h2>
+				<p>A cappuccino with a twist, served cold. The name comes from a godfather (a scotch- and amaretto drink) and Irish coffee. It's topped with a gin fizz &mdash; hence the "fizz".</p>
+				<ul>
+					<li>One count of <b>Canadian Club</b> whisky and a splash of <b>Amaretto</b> added to 5oz of <b>Counter Culture <i>Apollo</i></b> cold-brew coffee.</li>
+					<li>Blend 3oz heavy whipping cream with one egg-white, 1.5oz sugar, and 1oz gin. Pour out the liquid and add foam over the coffee.</li>
+				</ul>
+			</div>
 		</div>
+
 		<div class="drink-card">
-                  <div id="manhattan">
+			<div id="manhattan">
 				<div class="glass old-fashioned-glass on-the-rocks">
 					<div class="fill oz4 whisky"></div>
 				</div>
 			</div>
-			<h1>Mango-ld Fashioned</h1>
-                  <div class="recipe">
-                        <h2>Mango-ld Fashioned</h2>
-                        <p>A New Fashioned. See also: Mango-hattan.</p>
-                        <ul>
-                              <li>Two counts <b>Corner Creek</b> Bourbon whisky with a dash of <b>Angostura bitters</b>.</li>
-                              <li>Blend with a handful of frozen mango until smooth. Garnish with lime.</li>
-                        </ul>
-                  </div>
+			<h1>MangOld Fashioned</h1>
+			<div class="recipe">
+				<h2>MangOld Fashioned</h2>
+				<p>A New Fashioned. See also: Mango-hattan.</p>
+				<ul>
+					<li>Two counts <b>Corner Creek</b> Bourbon whisky with a dash of <b>Angostura bitters</b>.</li>
+					<li>Blend with a handful of frozen mango until smooth. Garnish with lime.</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="drink-card">
+			<div id="pom-mule">
+				<div class="copper mug on-the-rocks">
+					<div class="fill oz4 vodka-pomegranate-juice"></div>
+					<div class="fill oz3 ginger beer"></div>
+					<div class="garnish-with-lime"></div>
+				</div>
+			</div>
+			<h1>Pomegranate Moscow Mule</h1>
+			<div class="recipe">
+				<h2>Pomegranate Moscow Mule</h2>
+				<p>A treat with a surprise buzz.</p>
+				<ul>
+					<li>Two ounces vodka, three ounces pomegranate juice.</li>
+					<li>Shake with the juice of one half lime, and serve over ice.</li>
+					<li>Fill the rest of the mug with ginger beer.</li>
+				</ul>
+			</div>
 		</div>
 	</body>
-</html>
+	</html>
